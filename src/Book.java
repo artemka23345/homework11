@@ -5,10 +5,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return
-                "Название книги: " + bookTitle +
-                ", Год публикации: " + yearPublication +
-                ", Автор: " + author;
+        return "Название книги: " + bookTitle + ", Год публикации: " + yearPublication + ", Автор: " + author;
     }
 
     public Book(String bookTitle, int yearPublication, Author author) {
@@ -20,6 +17,7 @@ public class Book {
     public void setYearPublication(int yearPublication) {
         this.yearPublication = yearPublication;
     }
+
     public String getBookTitle() {
         return bookTitle;
     }
