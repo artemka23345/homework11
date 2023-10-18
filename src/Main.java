@@ -11,11 +11,15 @@ public class Main {
         book.setYearPublication(2023);
         System.out.println(book);
 
-        System.out.println(book3.hashCode() == book2.hashCode());
+        System.out.println(book3.hashCode());
+        System.out.println(book2.hashCode());
         System.out.println(book3.equals(book2));
 
         System.out.println(author2.hashCode() == author.hashCode());
         System.out.println(author2.equals(author));
+
+
+
 
 
 

@@ -36,19 +36,12 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Book book = (Book) o;
-
-        if (yearPublication != book.yearPublication) return false;
-        if (!Objects.equals(bookTitle, book.bookTitle)) return false;
-        return Objects.equals(author, book.author);
+        return yearPublication == book.yearPublication && Objects.equals(bookTitle, book.bookTitle) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        int result = bookTitle != null ? bookTitle.hashCode() : 0;
-        result = 31 * result + yearPublication;
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        return result;
+        return Objects.hash(bookTitle, yearPublication, author);
     }
 }

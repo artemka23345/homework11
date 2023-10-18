@@ -24,18 +24,13 @@ public class Author {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Author author = (Author) o;
-
-        if (!Objects.equals(name, author.name)) return false;
-        return Objects.equals(surname, author.surname);
+        return Objects.equals(name, author.name) && Objects.equals(surname, author.surname);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        return result;
+        return Objects.hash(name, surname);
     }
 
     public String getSurname() {
